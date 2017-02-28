@@ -1,0 +1,31 @@
+{
+    "name": "@remobile/react-native-echarts",
+    "version": "1.0.0",
+    "description": "A react-native wrapper baidu echarts",
+    "main": "index.js",
+    "author": {
+        "name": "YunJiang.Fang",
+        "email": "42550564@qq.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "react-native",
+        "react-component",
+        "ios",
+        "android",
+        "chart",
+        "charts",
+        "echarts",
+        "graph",
+        "remobile",
+        "mobile"
+    ],
+    "homepage": "https://github.com/remobile/react-native-echarts",
+    "bugs": {
+        "url": "https://github.com/remobile/react-native-echarts/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/remobile/react-native-echarts.git"
+    }
+}
