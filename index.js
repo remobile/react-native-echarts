@@ -4,6 +4,7 @@ var React = require('react');
 var ReactNative = require('react-native');
 var {
     WebView,
+    View,
     Dimensions,
 } = ReactNative;
 
@@ -51,17 +52,20 @@ module.exports = React.createClass({
         const {width, height} = this.props;
         const script = this.getInjectedJavaScript();
         return (
-            <WebView
-                ref="chart"
-                onLoadStart={this.onLoadStart}
-                onLoadEnd={this.onLoadEnd}
-                scrollEnabled={false}
-                scalesPageToFit={false}
-                startInLoadingState={true}
-                injectedJavaScript={script}
-                style={{width, height}}
-                source={source}
-                />
+            <View style={{width, height}}>
+                <WebView
+                    ref="chart"
+                    onLoadStart={this.onLoadStart}
+                    onLoadEnd={this.onLoadEnd}
+                    scrollEnabled={false}
+                    scalesPageToFit={true}
+                    startInLoadingState={true}
+                    injectedJavaScript={script}
+                    style={{width, height}}
+                    source={source}
+                    />
+                <View style={{width, height, position:'absolute', top:0, left:0, backgroundColor:'transparent'}} />
+            </View>
         );
     },
 });
