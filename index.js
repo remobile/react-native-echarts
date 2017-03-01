@@ -1,13 +1,13 @@
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
+const React = require('react');
+const ReactNative = require('react-native');
+const {
     WebView,
     View,
     Dimensions,
 } = ReactNative;
-
+const _ = require('lodash');
 const source = require('./tpl.html');
 
 module.exports = React.createClass({
