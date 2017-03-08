@@ -5,10 +5,11 @@ const ReactNative = require('react-native');
 const {
     WebView,
     View,
+    Platform,
     Dimensions,
 } = ReactNative;
 const _ = require('lodash');
-const source = require('./tpl.html');
+const source = Platform.OS==='android' ? { uri: 'file:///android_asset/tpl.html' } : require('./tpl.html');
 
 module.exports = React.createClass({
     getDefaultProps() {
@@ -33,10 +34,11 @@ module.exports = React.createClass({
     },
     getInjectedJavaScript() {
         const {width, height, option} = this.props;
+        const params = {...option, animation: false};
         return `
         document.body.style.height = "${height}px";
         document.body.style.width = "${width}px";
-        echarts.init(document.body).setOption(${this.getOption(option)})
+        echarts.init(document.body).setOption(${this.getOption(params)})
         `;
     },
     reload() {
