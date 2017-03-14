@@ -7,3 +7,4 @@
 .idea
 node_modules
 npm-debug.log
+/android/build/

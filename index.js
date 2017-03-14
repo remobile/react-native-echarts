@@ -9,7 +9,7 @@ const {
     Dimensions,
 } = ReactNative;
 const _ = require('lodash');
-const source = Platform.OS==='android' ? { uri: 'file:///android_asset/tpl.html' } : require('./tpl.html');
+const source = Platform.OS==='android' ? { uri: 'file:///android_asset/remobile-echarts.html' } : require('./remobile-echarts.html');
 
 module.exports = React.createClass({
     getDefaultProps() {
