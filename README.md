@@ -5,22 +5,6 @@ A react-native wrapper baidu echarts
 ```sh
 npm install @remobile/react-native-echarts --save
 ```
-### Installation (Android)
-```gradle
-...
-include ':react-native-echarts'
-project(':react-native-echarts').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-echarts/android')
-```
-
-* In `android/app/build.gradle`
-
-```gradle
-...
-dependencies {
-    ...
-    compile project(':react-native-echarts')
-}
-```
 
 ## Usage
 

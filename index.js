@@ -9,7 +9,14 @@ const {
     Dimensions,
 } = ReactNative;
 const _ = require('lodash');
-const source = Platform.OS==='android' ? { uri: 'file:///android_asset/remobile-echarts.html' } : require('./remobile-echarts.html');
+const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource.js');
+resolveAssetSource.setCustomSourceTransformer((resolver)=>{
+    if (Platform.OS === 'android' && !resolver.serverUrl && !resolver.bundlePath && resolver.asset.type === 'html') {
+        resolver.bundlePath = '/android_res/';
+    }
+    return resolver.defaultAsset();
+});
+const source = require('./remobile-echarts.html');
 
 module.exports = React.createClass({
     getDefaultProps() {
