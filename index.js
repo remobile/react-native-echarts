@@ -67,6 +67,7 @@ module.exports = React.createClass({
                     onLoadStart={this.onLoadStart}
                     onLoadEnd={this.onLoadEnd}
                     scrollEnabled={false}
+                    originWhitelist={['*']}
                     scalesPageToFit={Platform.OS === 'android'}
                     startInLoadingState
                     injectedJavaScript={script}
