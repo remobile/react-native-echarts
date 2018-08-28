@@ -1,6 +1,6 @@
 {
     "name": "@remobile/react-native-echarts",
-    "version": "5.0.4",
+    "version": "1.0.8",
     "description": "A react-native wrapper baidu echarts",
     "main": "index.js",
     "author": {
